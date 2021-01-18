@@ -67,7 +67,8 @@ export const GetMonitors = async (apikey, days) => {
         daily[map[date]].down.times += 1;
       }
     });
-
+    // 数据反转
+    daily.reverse();
     let status = "unknow";
     if (monitor.status === 2) status = "ok";
     if (monitor.status === 9) status = "down";
