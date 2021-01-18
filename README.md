@@ -8,6 +8,6 @@
 > https://solstice23.top/
 
 ## PC
-![](img/20210118213356.png)
+![](https://raw.githubusercontent.com/rateldev/uptime-status/main/img/20210118213356.png)
 ## Android
-![](img/20210118212821637.jpg)
+![](https://raw.githubusercontent.com/rateldev/uptime-status/main/img/20210118212821637.jpg)
