@@ -54,9 +54,9 @@ const UptimeItem = (props) => {
         effect="solid"
       />
       <div className="foot">
-        <span>今天</span>
-        <span>{total}</span>
         <span>{initial.format("YYYY-MM-DD")}</span>
+        <span>{total}</span>
+        <span>今天</span>
       </div>
     </div>
   );

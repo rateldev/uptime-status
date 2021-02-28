@@ -14,9 +14,7 @@ window.Config = {
 
   // UptimeRobot Api Keys
   // 支持 Monitor-Specific 和 Read-Only 两只 Api Key
-  ApiKeys: [
-    "m784488775-dd1ad84b209c05f8e185c33e"
-  ],
+  ApiKeys: ["m784488775-dd1ad84b209c05f8e185c33e"],
 
   // 是否显示监测站点的链接
   ShowLink: true,
@@ -27,14 +25,5 @@ window.Config = {
   CountDays: 60,
 
   // 导航栏菜单
-  Navi: [
-    {
-      text: "Homepage",
-      url: "https://status.org.cn/",
-    },
-    {
-      text: "GitHub",
-      url: "https://github.com/yb/uptime-status",
-    },
-  ],
+  Navi: [],
 };
