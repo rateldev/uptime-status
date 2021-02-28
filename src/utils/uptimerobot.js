@@ -2,8 +2,6 @@ import dayjs from "dayjs";
 import Axios from "axios";
 import { fixed } from "./helper";
 
-const Api = "https://api.uptimerobot.com/v2/getMonitors";
-
 export const GetMonitors = async (apikey, days) => {
   const dates = [];
   const today = dayjs(new Date().setHours(0, 0, 0, 0));
@@ -30,13 +28,14 @@ export const GetMonitors = async (apikey, days) => {
     custom_uptime_ranges: ranges.join("-"),
   };
 
-  const monitors = await Axios.post(Api, postdata, { timeout: 10000 }).then(
-    (response) => {
-      if (response.data.stat === "ok")
-        return Promise.resolve(response.data.monitors);
-      else return Promise.reject(response.data.error);
-    }
-  );
+  const api = window.Config.ApiDomain || "api.uptimerobot.com";
+  const monitors = await Axios.post(`https://${api}/v2/getMonitors`, postdata, {
+    timeout: 10000,
+  }).then((response) => {
+    if (response.data.stat === "ok")
+      return Promise.resolve(response.data.monitors);
+    else return Promise.reject(response.data.error);
+  });
 
   const apps = [];
   monitors.forEach((monitor) => {
@@ -67,8 +66,7 @@ export const GetMonitors = async (apikey, days) => {
         daily[map[date]].down.times += 1;
       }
     });
-    // 数据反转
-    daily.reverse();
+
     let status = "unknow";
     if (monitor.status === 2) status = "ok";
     if (monitor.status === 9) status = "down";

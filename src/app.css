@@ -8,7 +8,6 @@
 }
 
 body {
-  background: #f4f5f7;
   color: #3f4347;
   font-size: 12px;
   font-family: sans-serif;
@@ -22,163 +21,184 @@ a {
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 980px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 10px;
 }
 
-#header {
-  background: linear-gradient(150deg, #7795f8 15%, #6772e5 70%, #555abf 94%);
-  height: 60vh;
-}
-.header-container {
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 30px;
-}
-.title {
-  font-size: 50px;
-  font-weight: 600;
-  color: #fff;
-  padding-top: 15vh;
+#app {
+  padding-top: 75px;
 }
 
-.subtitle {
-  font-size: 26px;
-  margin-top: 30px;
-  opacity: 0.6;
-  font-weight: 400;
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #e3e4e6;
+  z-index: 10;
+}
+
+#header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 55px;
+}
+
+#header .logo {
+  font-size: 18px;
+  font-weight: bold;
+  color: #319848;
+}
+
+#header .navi {
+  font-size: 14px;
+}
+
+#header .navi a {
+  color: #838b90;
+  transition: color ease-out 300ms;
+  margin-left: 15px;
+}
+
+#header .navi a:hover {
+  color: #4b9b5d;
 }
 
 #uptime {
   background: #fff;
-  border-radius: 15px;
-  margin-top: calc(-45vh + 250px);
-  padding: 0;
+  border: 1px solid #e3e4e6;
+  border-radius: 5px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
   overflow: hidden;
-  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
 }
 
 #uptime .item {
-  padding: 25px 30px;
-  border-bottom: 1px solid #ddd;
-  transition: all 0.3s ease;
+  padding: 18px 20px;
+  border-bottom: 1px solid #e7e8e9;
 }
 
-#uptime .item:first-child {
-  padding-top: 30px;
-}
 #uptime .item:last-child {
-  padding-bottom: 30px;
   border-bottom: none;
 }
 
 #uptime .loading {
-  background: url(./assets/loading.svg) 50%/40px 40px no-repeat;
+  background: url(./assets/loading.svg) center center / 40px 40px no-repeat;
   height: 100px;
 }
 
-#uptime .meta {
-  justify-content: space-between;
-  margin-bottom: 20px;
+#uptime .item:hover {
+  background-color: #fffdf5;
 }
-#uptime .meta,
+
+#uptime .meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
 #uptime .meta .info {
   display: flex;
   align-items: center;
 }
+
 #uptime .meta .name {
   font-size: 16px;
   line-height: 20px;
-  color: #525f7f;
+  color: #5a606b;
 }
+
 #uptime .meta .link {
-  background: url(./assets/link.svg) 50%/100% 100% no-repeat;
+  background: url(./assets/link.svg) center center / 100% 100% no-repeat;
   width: 13px;
   height: 13px;
   margin-left: 6px;
   opacity: 0.6;
   text-indent: -99999px;
-  transition: opacity 0.3s ease-out;
+  transition: opacity ease-out 300ms;
 }
+
 #uptime .meta .link:hover {
   opacity: 1;
 }
+
 #uptime .meta .status {
-  background: 0/14px auto no-repeat;
+  background: left center / 14px auto no-repeat;
   padding-left: 20px;
   font-size: 14px;
 }
+
 #uptime .meta .status.ok {
   background-image: url(./assets/success.svg);
   color: #28a745;
 }
+
 #uptime .meta .status.down {
   background-image: url(./assets/fail.svg);
   color: #d9534f;
 }
+
 #uptime .meta .status.unknow {
   background-image: url(./assets/question.svg);
   color: #6a737d;
 }
+
 #uptime .timeline {
   height: 35px;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
+
 #uptime .timeline i {
   flex-grow: 1;
   margin: 0 1px;
   cursor: pointer;
-  opacity: 0.6;
-  border-radius: 2px;
-  transition: all 0.3s ease;
 }
-#uptime .item:hover .timeline i {
-  opacity: 1;
-}
-#uptime .timeline i:first-child {
-  margin-left: 0;
-}
-#uptime .timeline i:last-child {
-  margin-right: 0;
-}
+
 #uptime .timeline i:hover {
   opacity: 0.6;
 }
+
 #uptime .timeline i.ok {
-  background: #4fd69c;
+  background: #9fd8ac;
 }
+
 #uptime .timeline i.none {
-  background: #eee;
+  background: #f3f3f3;
 }
+
 #uptime .timeline i.down {
-  background: #f75676;
+  background: #f29571;
 }
+
 #uptime .tooltip {
   font-size: 12px !important;
   padding: 6px 9px !important;
   border-radius: 4px !important;
-  background: #172b4d;
-  transition: all 0.3s ease;
 }
+
 #uptime .foot {
   display: flex;
   justify-content: space-between;
   line-height: 15px;
   color: #999fa6;
 }
+
 #footer {
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.8;
-  color: #8898aa;
-  padding: 20px 0;
+  color: #999fa6;
+  padding: 20px 0px;
 }
+
 #footer a {
-  color: #5e72e4;
-  font-weight: 700;
+  color: #58ad6a;
+  font-weight: bold;
 }

@@ -6,9 +6,17 @@ window.Config = {
   // 站点链接
   SiteUrl: "/",
 
+  // UptimeRobot Api 域名
+  // 只需填写域名部分，默认为官网域名
+  // 因官网 API 时不时的会 CROS 报错，可填自定义反代域名
+  // 详见 https://github.com/yb/uptime-status/ 说明
+  ApiDomain: "api.uptimerobot.com",
+
   // UptimeRobot Api Keys
   // 支持 Monitor-Specific 和 Read-Only 两只 Api Key
-  ApiKeys: ["u1062263-79f0a49c2f1c212f9b58d760"],
+  ApiKeys: [
+    "m784488775-dd1ad84b209c05f8e185c33e"
+  ],
 
   // 是否显示监测站点的链接
   ShowLink: true,
@@ -19,5 +27,14 @@ window.Config = {
   CountDays: 60,
 
   // 导航栏菜单
-  Navi: [],
+  Navi: [
+    {
+      text: "Homepage",
+      url: "https://status.org.cn/",
+    },
+    {
+      text: "GitHub",
+      url: "https://github.com/yb/uptime-status",
+    },
+  ],
 };
