@@ -3,13 +3,9 @@
 一个基于 UptimeRobot API 的在线状态面板，源代码来自uptime-status，修改了布局排序以及样式
 
 
-An uptime status dashboard based on UptimeRobot API
-
 ------
 
 ### 基于 Cloudflare Workers 搭建 UptimeRobot API 代理，以解决官网 API 跨域问题
-
-Build an UptimeRobot API proxy based on **Cloudflare Workers** to solve the cross-domain issue of official API
 
 ```
 const handleRequest = async ({ request }) => {
@@ -30,8 +26,6 @@ addEventListener('fetch', (event) => {
 ```
 
 修改 `config.js` 中的 `ApiDomian` 为你的域名；
-
-Modify `ApiDomian` in `config.js` to your domain;
 > ## 原项目地址
 > https://github.com/yb/uptime-status
 
