@@ -40,6 +40,6 @@ Modify `ApiDomian` in `config.js` to your domain;
 > https://solstice23.top/
 
 ## PC
-![](img/20210118213356.png)
+![](https://gejiba.com/view.php/4af0e512f1df333affab239056820e0d.png)
 ## Android
-![](img/20210118212821637.jpg)
+![](https://gejiba.com/view.php/bf9ae5c191a1aa3a92b2661aadc4ecc0.jpg)
